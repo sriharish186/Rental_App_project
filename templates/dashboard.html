@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Dashboard</h2>
+
+<p>Welcome, {{ current_user.username }}</p>
+<p>Role: {{ current_user.role }}</p>
+
+{% if current_user.role == 'owner' %}
+<a href="/create_listing">Create Listing</a>
+{% endif %}
+
+<h3>Your Disputes</h3>
+
+{% for dispute in disputes %}
+<div class="card">
+    <p>{{ dispute.issue }}</p>
+    <p>Status: {{ dispute.status }}</p>
+</div>
+{% endfor %}
+
+{% endblock %}

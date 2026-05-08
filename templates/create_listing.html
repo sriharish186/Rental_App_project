@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Create Listing</h2>
+
+<form method="POST">
+
+<input type="text" name="title" placeholder="Property Title" required>
+
+<input type="text" name="location" placeholder="Location" required>
+
+<input type="number" name="rent" placeholder="Monthly Rent" required>
+
+<input type="number" name="deposit" placeholder="Security Deposit" required>
+
+<textarea name="description" placeholder="Description"></textarea>
+
+<button type="submit">Create</button>
+
+</form>
+
+{% endblock %}

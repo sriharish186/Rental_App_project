@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>All Listings</h2>
+
+{% for listing in listings %}
+<div class="card">
+    <h3>{{ listing.title }}</h3>
+    <p>{{ listing.location }}</p>
+    <p>Rent: ₹{{ listing.rent }}</p>
+    <p>Deposit: ₹{{ listing.deposit }}</p>
+    <p>{{ listing.description }}</p>
+</div>
+{% endfor %}
+
+{% endblock %}

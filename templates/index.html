@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Rental App Platform</h1>
+
+<h2>Featured Listings</h2>
+
+{% for listing in listings %}
+<div class="card">
+    <h3>{{ listing.title }}</h3>
+    <p>Location: {{ listing.location }}</p>
+    <p>Rent: ₹{{ listing.rent }}</p>
+    <p>Deposit: ₹{{ listing.deposit }}</p>
+</div>
+{% endfor %}
+
+{% endblock %}
